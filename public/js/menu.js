@@ -133,15 +133,16 @@ console.log(menuList);
 // const menuContainer = document.createElement("ul")
 // menuContainer.classList.add('nav-menu')
 const menuContainer = document.querySelector('.nav-menu')
+const mobileMenuContainer = document.querySelector('.mobile-nav-menu-ul')
 
-function renderLi(data) {
-  for(let i=0;i<data.length;i++){
+function renderLiDesktop(data) {
+  for (let i = 0; i < data.length; i++) {
     const li = document.createElement('li')
     const alink = document.createElement('a')
-    alink.className='menuToggle lv1Menu'
+    alink.className = 'menuToggle lv1Menu'
     alink.textContent = data[i].MenuName
     li.appendChild(alink)
-    if(data[i].isChild==='1'){
+    if (data[i].isChild === '1') {
       li.appendChild(renderChildMenuLevel1(data[i].Child))
     }
     menuContainer.appendChild(li)
@@ -150,20 +151,20 @@ function renderLi(data) {
   function renderChildMenuLevel1(arr) {
     const menuPanel = document.createElement('div')
     menuPanel.classList.add(`nav-menu-1`)
-    for (let i=0;i<arr.length;i++){
+    for (let i = 0; i < arr.length; i++) {
       const aLink = document.createElement('a')
-      aLink.className='dropdown-item'
+      aLink.className = 'dropdown-item'
       const div = document.createElement('div')
-      div.textContent=arr[i].MenuName
+      div.textContent = arr[i].MenuName
       const span = document.createElement('span')
-      span.className='iconfont icon_angle-right-light'
+      span.className = 'iconfont icon_angle-right-light'
       aLink.appendChild(div)
-      if(arr[i].isChild==='1'){
+      if (arr[i].isChild === '1') {
         aLink.classList.add('itemLevel1')
         aLink.appendChild(span)
         menuPanel.appendChild(aLink)
         menuPanel.appendChild(renderChildMenuLevel2(arr[i].Child))
-      }else {
+      } else {
         menuPanel.appendChild(aLink)
       }
 
@@ -174,20 +175,20 @@ function renderLi(data) {
   function renderChildMenuLevel2(arr) {
     const menuPanel = document.createElement('div')
     menuPanel.classList.add(`nav-menu-2`)
-    for (let i=0;i<arr.length;i++){
+    for (let i = 0; i < arr.length; i++) {
       const aLink = document.createElement('a')
-      aLink.className='dropdown-item'
+      aLink.className = 'dropdown-item'
       const div = document.createElement('div')
-      div.textContent=arr[i].MenuName
+      div.textContent = arr[i].MenuName
       const span = document.createElement('span')
-      span.className='iconfont icon_angle-right-light'
+      span.className = 'iconfont icon_angle-right-light'
       aLink.appendChild(div)
-      if(arr[i].isChild==='1'){
+      if (arr[i].isChild === '1') {
         aLink.classList.add('itemLevel2')
         aLink.appendChild(span)
         menuPanel.appendChild(aLink)
         menuPanel.appendChild(renderChildMenuLevel3(arr[i].Child))
-      }else {
+      } else {
         menuPanel.appendChild(aLink)
       }
     }
@@ -197,20 +198,20 @@ function renderLi(data) {
   function renderChildMenuLevel3(arr) {
     const menuPanel = document.createElement('div')
     menuPanel.classList.add(`nav-menu-3`)
-    for (let i=0;i<arr.length;i++){
+    for (let i = 0; i < arr.length; i++) {
       const aLink = document.createElement('a')
-      aLink.className='dropdown-item'
+      aLink.className = 'dropdown-item'
       const div = document.createElement('div')
-      div.textContent=arr[i].MenuName
+      div.textContent = arr[i].MenuName
       const span = document.createElement('span')
-      span.className='iconfont icon_angle-right-light'
+      span.className = 'iconfont icon_angle-right-light'
       aLink.appendChild(div)
-      if(arr[i].isChild==='1'){
+      if (arr[i].isChild === '1') {
         aLink.classList.add('itemLevel3')
         aLink.appendChild(span)
         menuPanel.appendChild(aLink)
         menuPanel.appendChild(renderChildMenuLevel4(arr[i].Child))
-      }else {
+      } else {
         menuPanel.appendChild(aLink)
       }
     }
@@ -220,15 +221,15 @@ function renderLi(data) {
   function renderChildMenuLevel4(arr) {
     const menuPanel = document.createElement('div')
     menuPanel.classList.add(`nav-menu-4`)
-    for (let i=0;i<arr.length;i++){
+    for (let i = 0; i < arr.length; i++) {
       const aLink = document.createElement('a')
-      aLink.className='dropdown-item'
+      aLink.className = 'dropdown-item'
       const div = document.createElement('div')
-      div.textContent=arr[i].MenuName
+      div.textContent = arr[i].MenuName
       const span = document.createElement('span')
-      span.className='iconfont icon_angle-right-light'
+      span.className = 'iconfont icon_angle-right-light'
       aLink.appendChild(div)
-      if(arr[i].isChild==='1'){
+      if (arr[i].isChild === '1') {
         aLink.appendChild(span)
       }
       menuPanel.appendChild(aLink)
@@ -249,19 +250,19 @@ function renderLi(data) {
       e.preventDefault();
       e.stopPropagation();
       // console.log($(this));
-      $(this).addClass('activated').next().show().addClass('activated').css({left:menuWidth});
+      $(this).addClass('activated').next().show().addClass('activated').css({left: menuWidth});
     });
     $('.itemLevel2').on('click mouseenter', function (e) {
       e.preventDefault();
       e.stopPropagation();
       // console.log($(this));
-      $(this).addClass('activated').next().show().addClass('activated').css({left:menuWidth});
+      $(this).addClass('activated').next().show().addClass('activated').css({left: menuWidth});
     });
     $('.itemLevel3').on('click mouseenter', function (e) {
       e.preventDefault();
       e.stopPropagation();
       // console.log($(this));
-      $(this).addClass('activated').next().show().addClass('activated').css({left:menuWidth});
+      $(this).addClass('activated').next().show().addClass('activated').css({left: menuWidth});
     });
 
 // leave event
@@ -326,5 +327,287 @@ function renderLi(data) {
   navStart()
 }
 
-renderLi(menuList)
+function renderLiMobile(data) {
 
+  for (let i = 0; i < data.length; i++) {
+    const li = document.createElement('li')
+    li.className = 'mobile-nav-menu-li-title-1'
+    li.textContent = data[i].MenuName
+
+    if (data[i].isChild === '1') {
+      mobileMenuContainer.appendChild(li)
+      li.insertAdjacentElement('afterend',renderChildMenuLevel2(data[i].Child))
+    } else {
+      li.classList.add('contentNO')
+      mobileMenuContainer.appendChild(li)
+    }
+  }
+
+  function renderChildMenuLevel2(arr) {
+    const menuPanel = document.createElement('ul')
+    menuPanel.className="mobile-nav-menu-ul-2 animated fadeIn"
+    for (let i = 0; i < arr.length; i++) {
+      const li = document.createElement('li')
+      li.className="mobile-nav-menu-li-title-2"
+      li.textContent=arr[i].MenuName
+      menuPanel.appendChild(li)
+      if (arr[i].isChild === '1') {
+        li.insertAdjacentElement('afterend',renderChildMenuLevel3(arr[i].Child))
+      }else {
+        li.classList.add('contentNO')
+      }
+    }
+    return menuPanel
+  }
+
+  function renderChildMenuLevel3(arr) {
+    const menuPanel = document.createElement('ul')
+    menuPanel.className="mobile-nav-menu-ul-3 animated fadeIn"
+    for (let i = 0; i < arr.length; i++) {
+      const li = document.createElement('li')
+      li.className="mobile-nav-menu-li-title-3"
+      li.textContent=arr[i].MenuName
+      menuPanel.appendChild(li)
+      if (arr[i].isChild === '1') {
+        li.insertAdjacentElement('afterend',renderChildMenuLevel4(arr[i].Child))
+      }else {
+        li.classList.add('contentNO')
+      }
+    }
+    return menuPanel
+  }
+
+  function renderChildMenuLevel4(arr) {
+    const menuPanel = document.createElement('ul')
+    menuPanel.className="mobile-nav-menu-ul-4 animated fadeIn"
+    for (let i = 0; i < arr.length; i++) {
+      const li = document.createElement('li')
+      li.className="mobile-nav-menu-li-title-4"
+      li.textContent=arr[i].MenuName
+      menuPanel.appendChild(li)
+      if (arr[i].isChild === '1') {
+        li.insertAdjacentElement('afterend',renderChildMenuLevel5(arr[i].Child))
+      }else {
+        li.classList.add('contentNO')
+      }
+    }
+    return menuPanel
+  }
+
+  function renderChildMenuLevel5(arr) {
+    const menuPanel = document.createElement('ul')
+    menuPanel.className="mobile-nav-menu-ul-5 animated fadeIn"
+    for (let i = 0; i < arr.length; i++) {
+      const li = document.createElement('li')
+      li.className="mobile-nav-menu-li-title-5"
+      li.textContent=arr[i].MenuName
+      menuPanel.appendChild(li)
+      if (arr[i].isChild === '0') {
+        li.classList.add('contentNO')
+      }
+    }
+    return menuPanel
+  }
+
+  function mobileNavStart() {
+
+    const state = {
+      opened: false,
+      masked: true
+    };
+
+    $(function () {
+
+      $('.mobile-nav-menu-li-title-1').click(function () {
+        if ($(this).hasClass('active')) {
+          $(this).removeClass('active').next().hide();
+          return;
+        }
+        if($(this).hasClass('contentNO')){
+          return;
+        }
+
+        $('.mobile-nav-menu-li-title-2.active').removeClass('active').next().hide();
+
+        $('.mobile-nav-menu-li-title-1.active').removeClass('active').next().hide();
+        $(this).addClass('active').next().show();
+
+      });
+
+      $('.mobile-nav-menu-li-title-2').click(function () {
+        if ($(this).hasClass('active')) {
+          $(this).removeClass('active').next().hide();
+          return;
+        }
+        if($(this).hasClass('contentNO')){
+          return;
+        }
+
+        $('.mobile-nav-menu-li-title-2.active').removeClass('active').next().hide();
+        $(this).addClass('active').next().show();
+
+      });
+
+      $('.mobile-nav-menu-li-title-3').click(function () {
+        if ($(this).hasClass('active')) {
+          $(this).removeClass('active').next().hide();
+          return;
+        }
+        if($(this).hasClass('contentNO')){
+          return;
+        }
+
+        $('.mobile-nav-menu-li-title-3.active').removeClass('active').next().hide();
+        $(this).addClass('active').next().show();
+
+      });
+
+      $('.mobile-nav-menu-li-title-4').click(function () {
+        if ($(this).hasClass('active')) {
+          $(this).removeClass('active').next().hide();
+          return;
+        }
+        if($(this).hasClass('contentNO')){
+          return;
+        }
+
+        $('.mobile-nav-menu-li-title-4.active').removeClass('active').next().hide();
+        $(this).addClass('active').next().show();
+
+      });
+
+
+      $('.contentsMask').click(function () {
+        subMenuToggle();
+      });
+
+      $('#mobileSideMenu').click(function () {
+        $('.contentsMask .side-menu-close').addClass('active')
+        subMenuToggle();
+      });
+
+      function subMenuToggle() {
+        const type = 1;
+
+        if (!state.opened) {
+          ////$('.subMenu').css('top', 0);
+          //if (type == "1" || type == "3") {
+          //    $('.subMenu').css('position', 'fixed');
+          //    $('.subMenu').css('height', '100%');
+          //} else {
+          //    $('.subMenu').css('position', 'absolute');
+          //    $('.subMenu').css('height', 'auto');
+          //    $(window).scrollTop(0);
+          //}
+        }
+
+        //$('.subMenu').css('left', opened ? -240 : 0);
+        $('.subMenu').css({
+          'transform': 'translateX(' + (state.opened ? -240 : 0) + 'px)',
+          '-webkit-transform': 'translateX(' + (state.opened ? -240 : 0) + 'px)',
+          '-moz-transform': 'translateX(' + (state.opened ? -240 : 0) + 'px)',
+          '-ms-transform': 'translateX(' + (state.opened ? -240 : 0) + 'px)',
+          '-o-transform': 'translateX(' + (state.opened ? -240 : 0) + 'px)'
+        });
+
+        if (!state.opened) {
+          //if (type == "1" || type == "2") {
+          //$('.mainContents').css('left', state.opened ? 0 : 240);
+          $('.mainContents').css({
+            'transform': 'translateX(' + (state.opened ? 0 : 240) + 'px)',
+            '-webkit-transform': 'translateX(' + (state.opened ? 0 : 240) + 'px)',
+            '-moz-transform': 'translateX(' + (state.opened ? 0 : 240) + 'px)',
+            '-ms-transform': 'translateX(' + (state.opened ? 0 : 240) + 'px)',
+            '-o-transform': 'translateX(' + (state.opened ? 0 : 240) + 'px)'
+          });
+          //}
+        } else {
+          //$('.mainContents').css('left', state.opened ? 0 : 240);
+          $('.mainContents').css({
+            'transform': 'translateX(' + (state.opened ? 0 : 240) + 'px)',
+            '-webkit-transform': 'translateX(' + (state.opened ? 0 : 240) + 'px)',
+            '-moz-transform': 'translateX(' + (state.opened ? 0 : 240) + 'px)',
+            '-ms-transform': 'translateX(' + (state.opened ? 0 : 240) + 'px)',
+            '-o-transform': 'translateX(' + (state.opened ? 0 : 240) + 'px)'
+          });
+        }
+
+        if (state.masked) {
+          if (state.opened) {
+            $('.contentsMask').hide();
+          } else {
+            $('.contentsMask').show();
+          }
+        }
+        if (!state.opened) {
+          $('#mobileSideMenu').addClass('active');
+        } else {
+          $('#mobileSideMenu').removeClass('active');
+        }
+        state.opened = !state.opened;
+      }
+
+      $(window).on("load", resizeMainContents);
+      $(window).on("resize", resizeMainContents);
+      $(window).on("orientationchange", resizeMainContents);
+
+      function resizeMainContents() {
+        let prewinWidth = 768;
+        const winxs2 = 992;
+        const ww = $(window).width();
+
+        if (ww != prewinWidth) {
+          if (ww > winxs2 && prewinWidth <= winxs2) {
+            //$('.mainContents').css('left', 0);
+            $('.mainContents').css({
+              'transform': 'translateX(' + (state.opened ? 0 : 240) + 'px)',
+              '-webkit-transform': 'translateX(0px)',
+              '-moz-transform': 'translateX(0px)',
+              '-ms-transform': 'translateX(0px)',
+              '-o-transform': 'translateX(0px)'
+            });
+          } else if (ww <= winxs2 && prewinWidth > winxs2) {
+            //$('.mainContents').css('left', state.opened ? 240 : 0);
+            $('.mainContents').css({
+              'transform': 'translateX(' + (state.opened ? 240 : 0) + 'px)',
+              '-webkit-transform': 'translateX(' + (state.opened ? 240 : 0) + 'px)',
+              '-moz-transform': 'translateX(' + (state.opened ? 240 : 0) + 'px)',
+              '-ms-transform': 'translateX(' + (state.opened ? 240 : 0) + 'px)',
+              '-o-transform': 'translateX(' + (state.opened ? 240 : 0) + 'px)'
+            });
+          }
+        }
+        prewinWidth = ww;
+        //console.log($('.subMenu').height())
+        //$('.subMenu').height($(window).height() - 65);
+        //console.log($(window).height());
+        //console.log($('.subMenu').height());
+
+      }
+    });
+  }
+  mobileNavStart()
+}
+
+// Create a condition that targets viewports at least 768px wide
+const mediaQuery = window.matchMedia('(min-width: 965px)')
+
+function handleTabletChange(e) {
+  // Check if the media query is true
+  if (e.matches) {
+    // Then log the following message to the console
+    $('.mobile-nav-menu-ul:not(last-child)').html('')
+    console.log('above 965px')
+    renderLiDesktop(menuList)
+  } else {
+    $('.nav-menu').html('')
+    renderLiMobile(menuList)
+    console.log('under 965px');
+  }
+}
+
+// Register event listener
+mediaQuery.addListener(handleTabletChange)
+
+// Initial check
+handleTabletChange(mediaQuery)

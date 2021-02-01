@@ -16,7 +16,14 @@
   top: 50px;
 
   a {
-    display: block;
+    img {
+      margin-left: 0;
+    }
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
   }
 
   .mobile-nav-menu-ul-2, .mobile-nav-menu-ul-3 {
