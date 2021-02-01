@@ -101,6 +101,7 @@ body {
     white-space: nowrap;
     font-size: .9rem; }
     .nav-menu li a {
+      padding: 10px 0;
       text-decoration: none;
       color: #707070; }
   .nav-menu .nav-menu-1 {

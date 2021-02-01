@@ -135,26 +135,196 @@ console.log(menuList);
 const menuContainer = document.querySelector('.nav-menu')
 
 function renderLi(data) {
-  const level1 = data.map((item, index) => {
-    return `<li><a class="menuToggle lv1Menu">${item.MenuName}</a></li>
-    ${item.isChild ==='1' ? renderChildMenu(item.Child) : ''}
-`
-  }).join('')
+  for(let i=0;i<data.length;i++){
+    const li = document.createElement('li')
+    const alink = document.createElement('a')
+    alink.className='menuToggle lv1Menu'
+    alink.textContent = data[i].MenuName
+    li.appendChild(alink)
+    if(data[i].isChild==='1'){
+      li.appendChild(renderChildMenuLevel1(data[i].Child))
+    }
+    menuContainer.appendChild(li)
+  }
 
-  return level1
+  function renderChildMenuLevel1(arr) {
+    const menuPanel = document.createElement('div')
+    menuPanel.classList.add(`nav-menu-1`)
+    for (let i=0;i<arr.length;i++){
+      const aLink = document.createElement('a')
+      aLink.className='dropdown-item'
+      const div = document.createElement('div')
+      div.textContent=arr[i].MenuName
+      const span = document.createElement('span')
+      span.className='iconfont icon_angle-right-light'
+      aLink.appendChild(div)
+      if(arr[i].isChild==='1'){
+        aLink.classList.add('itemLevel1')
+        aLink.appendChild(span)
+        menuPanel.appendChild(aLink)
+        menuPanel.appendChild(renderChildMenuLevel2(arr[i].Child))
+      }else {
+        menuPanel.appendChild(aLink)
+      }
+
+    }
+    return menuPanel
+  }
+
+  function renderChildMenuLevel2(arr) {
+    const menuPanel = document.createElement('div')
+    menuPanel.classList.add(`nav-menu-2`)
+    for (let i=0;i<arr.length;i++){
+      const aLink = document.createElement('a')
+      aLink.className='dropdown-item'
+      const div = document.createElement('div')
+      div.textContent=arr[i].MenuName
+      const span = document.createElement('span')
+      span.className='iconfont icon_angle-right-light'
+      aLink.appendChild(div)
+      if(arr[i].isChild==='1'){
+        aLink.classList.add('itemLevel2')
+        aLink.appendChild(span)
+        menuPanel.appendChild(aLink)
+        menuPanel.appendChild(renderChildMenuLevel3(arr[i].Child))
+      }else {
+        menuPanel.appendChild(aLink)
+      }
+    }
+    return menuPanel
+  }
+
+  function renderChildMenuLevel3(arr) {
+    const menuPanel = document.createElement('div')
+    menuPanel.classList.add(`nav-menu-3`)
+    for (let i=0;i<arr.length;i++){
+      const aLink = document.createElement('a')
+      aLink.className='dropdown-item'
+      const div = document.createElement('div')
+      div.textContent=arr[i].MenuName
+      const span = document.createElement('span')
+      span.className='iconfont icon_angle-right-light'
+      aLink.appendChild(div)
+      if(arr[i].isChild==='1'){
+        aLink.classList.add('itemLevel3')
+        aLink.appendChild(span)
+        menuPanel.appendChild(aLink)
+        menuPanel.appendChild(renderChildMenuLevel4(arr[i].Child))
+      }else {
+        menuPanel.appendChild(aLink)
+      }
+    }
+    return menuPanel
+  }
+
+  function renderChildMenuLevel4(arr) {
+    const menuPanel = document.createElement('div')
+    menuPanel.classList.add(`nav-menu-4`)
+    for (let i=0;i<arr.length;i++){
+      const aLink = document.createElement('a')
+      aLink.className='dropdown-item'
+      const div = document.createElement('div')
+      div.textContent=arr[i].MenuName
+      const span = document.createElement('span')
+      span.className='iconfont icon_angle-right-light'
+      aLink.appendChild(div)
+      if(arr[i].isChild==='1'){
+        aLink.appendChild(span)
+      }
+      menuPanel.appendChild(aLink)
+    }
+    return menuPanel
+  }
+
+  function navStart() {
+    const menuWidth = 200
+// click event
+    $('.menuToggle').on('click mouseenter', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      // console.log($(this));
+      $(this).addClass('activated').next().show().addClass('activated');
+    });
+    $('.itemLevel1').on('click mouseenter', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      // console.log($(this));
+      $(this).addClass('activated').next().show().addClass('activated').css({left:menuWidth});
+    });
+    $('.itemLevel2').on('click mouseenter', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      // console.log($(this));
+      $(this).addClass('activated').next().show().addClass('activated').css({left:menuWidth});
+    });
+    $('.itemLevel3').on('click mouseenter', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      // console.log($(this));
+      $(this).addClass('activated').next().show().addClass('activated').css({left:menuWidth});
+    });
+
+// leave event
+    $('.menuToggle').on('mouseleave', function (e) {
+      const thisObi = $(this), theObj = $(e.relatedTarget);
+      if (!($(theObj).hasClass('activated') || $(theObj).hasClass('nav-menu-1') || $(theObj).parent().hasClass('nav-menu-1'))) {
+        $(thisObi).removeClass('activated').next().hide().removeClass('activated');
+      }
+    });
+
+    $('.itemLevel1').on('mouseleave', function (e) {
+      const thisObi = $(this), theObj = $(e.relatedTarget);
+      if (!($(theObj).hasClass('activated') || $(theObj).hasClass('nav-menu-2') || $(theObj).parent().hasClass('nav-menu-2'))) {
+        $(thisObi).removeClass('activated').next().hide().removeClass('activated');
+      }
+    });
+    $('.itemLevel2').on('mouseleave', function (e) {
+      const thisObi = $(this), theObj = $(e.relatedTarget);
+      if (!($(theObj).hasClass('activated') || $(theObj).hasClass('nav-menu-3') || $(theObj).parent().hasClass('nav-menu-3'))) {
+        $(thisObi).removeClass('activated').next().hide().removeClass('activated');
+      }
+    });
+    $('.itemLevel3').on('mouseleave', function (e) {
+      const thisObi = $(this), theObj = $(e.relatedTarget);
+      if (!($(theObj).hasClass('activated') || $(theObj).hasClass('nav-menu-4') || $(theObj).parent().hasClass('nav-menu-4'))) {
+        $(thisObi).removeClass('activated').next().hide().removeClass('activated');
+      }
+    });
+
+// nav-menu-level leave event
+    $('.nav-menu-1').on('mouseleave', function (e) {
+      const thisObi = $(this), theObj = $(e.relatedTarget);
+      // console.log(theObj);
+      if (!$(theObj).hasClass('activated')) {
+        $(thisObi).removeClass('activated').hide().prev().removeClass('activated');
+      }
+    });
+    $('.nav-menu-2').on('mouseleave', function (e) {
+      const thisObi = $(this), theObj = $(e.relatedTarget);
+
+      if (!$(theObj).hasClass('activated')) {
+        $(thisObi).removeClass('activated').hide().prev().removeClass('activated');
+      }
+    });
+    $('.nav-menu-3').on('mouseleave', function (e) {
+      const thisObi = $(this), theObj = $(e.relatedTarget);
+
+      if (!$(theObj).hasClass('activated')) {
+        $(thisObi).removeClass('activated').hide().prev().removeClass('activated');
+      }
+    });
+    $('.nav-menu-4').on('mouseleave', function (e) {
+      const thisObi = $(this), theObj = $(e.relatedTarget);
+
+      if (!$(theObj).hasClass('activated')) {
+        $(thisObi).removeClass('activated').hide().prev().removeClass('activated');
+      }
+    });
+
+  }
+
+  navStart()
 }
 
-function renderChildMenu(arr) {
-  const menuPanel = document.createElement('div')
-  menuPanel.classList.add(`nav-menu-1`)
-  return arr.map(item=>{
-    return `<a href="" class="dropdown-item itemLevel1">
-                            <div>${item.MenuName}</div>
-                            ${item.isChild ==='1' ? `<span className="iconfont icon_angle-right-light"></span>` : ''}
-                            
-                        </a>`
-  }).join('')
-}
+renderLi(menuList)
 
-
-menuContainer.insertAdjacentHTML('beforeend', renderLi(menuList))
