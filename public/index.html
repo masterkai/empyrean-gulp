@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" style='font-family: "Microsoft YaHei","Noto Sans TC", sans-serif;'>
+<head>
+    <meta charset="UTF-8">
+    <title>Empyrean-site</title>
+
+    <!--=========================== CSS ===========================-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="build/css/iconfont/iconfont.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap"
+          rel="stylesheet"/>
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="build/css/styles.css">
+    <!-- js -->
+    <script type="text/javascript" src="build/js/wow.min.js"></script>
+    <script type="text/javascript">new WOW().init();</script>
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid d-flex justify-content-between">
+        <div class="d-flex beforeNav">
+            <div class="sideMenuButton">
+                <button class="EmpyButton" id="mobileSideMenu">
+                    <span class="iconfont icon_bars-light"></span>
+                </button>
+            </div>
+            <a class="navbar-brand" href="#">
+                <img class="logo" src="build/images/empyrean-logo.svg" alt="empyrean-site-logo" />
+            </a>
+        </div>
+
+        <div class="nav-menu">
+
+        </div>
+
+        <div class="d-flex align-middle justify-content-between">
+            <div class="search">
+                <input class="form-control me-2" type="search" placeholder="搜尋..." aria-label="Search" />
+                <span class="iconfont icon_search-light"></span>
+            </div>
+            <div class="search-mobile">
+                <button class="EmpyButton"><span class="iconfont icon_search-light"></span></button>
+            </div>
+            <div class="dropdown">
+                <button class="EmpyButton" type="button" id="UserDropdown" data-bs-toggle="dropdown" aria-expanded="false"><span class="iconfont icon_user-light"></span></button>
+                <ul class="Empy-dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li>
+                        <div class="user-profile-item">
+                            <!--<span class="iconfont icon_user-light"></span>-->
+                            <div class="avatar" style="background-image: url(build/images/avatar/cat.PNG)"></div>
+                            <div class="user-profile">
+                                <div class="name">max</div>
+                                <div class="email">max@verygps.com.tw</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a class="dropdown-item" href="#">個人設定</a></li>
+                    <li><a class="dropdown-item" href="#">登出</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+            <img class="img-fluid" src="build/images/carousell/banner01.png" alt="" />
+        </div>
+        <div class="swiper-slide">
+            <img class="img-fluid" src="build/images/carousell/banner02.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+            <img class="img-fluid" src="build/images/carousell/banner03.jpg" alt="" />
+        </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+<div class="container-fluid">
+    <div class="sectionTitle">知識與應用</div>
+    <div class="EmpyContainer">
+        <div class="EmpyGrid">
+            <div class="EmpyGrid__column-3">
+                <div class="imgButton">
+                    <div class="subject">他/她的冒險故事</div>
+                    <img src="build/images/knowledge/knowledge-frame.png" alt="" class="frame" />
+                    <img class="knowledge-img" src="build/images/knowledge/knowledge01.jpg" alt="" />
+                </div>
+            </div>
+            <div class="EmpyGrid__column-3">
+                <div class="imgButton">
+                    <div class="subject">訓練世界</div>
+                    <img src="build/images/knowledge/knowledge-frame.png" alt="" class="frame" />
+                    <img class="knowledge-img" src="build/images/knowledge/knowledge02.jpg" alt="" />
+                </div>
+            </div>
+            <div class="EmpyGrid__column-3">
+                <div class="imgButton">
+                    <div class="subject">名人榜</div>
+                    <img src="build/images/knowledge/knowledge-frame.png" alt="" class="frame" />
+                    <img class="knowledge-img" src="build/images/knowledge/knowledge03.jpg" alt="" />
+                </div>
+            </div>
+            <div class="EmpyGrid__column-3">
+                <div class="imgButton">
+                    <div class="subject">運動知識</div>
+                    <img src="build/images/knowledge/knowledge-frame.png" alt="" class="frame" />
+                    <img class="knowledge-img" src="build/images/knowledge/knowledge04.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="EmpyContainer">
+        <div class="EmpyGrid">
+            <div class="EmpyGrid__column-3">
+                <div class="imgButton imgButton--xs">
+                    <img src="build/images/application/app-frame.png" alt="" class="frame" />
+                    <img src="build/images/application/app01.svg" alt="" />
+                </div>
+            </div>
+            <div class="EmpyGrid__column-3">
+                <div class="imgButton imgButton--xs">
+                    <img src="build/images/application/app-frame.png" alt="" class="frame" />
+                    <img src="build/images/application/app02.svg" alt="" />
+                </div>
+            </div>
+            <div class="EmpyGrid__column-3">
+                <div class="imgButton imgButton--xs">
+                    <img src="build/images/application/app-frame.png" alt="" class="frame" />
+                    <img src="build/images/application/app03.svg" alt="" />
+                </div>
+            </div>
+            <div class="EmpyGrid__column-3">
+                <div class="imgButton imgButton--xs">
+                    <img src="build/images/application/app-frame.png" alt="" class="frame" />
+                    <img src="build/images/application/app04.svg" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sectionTitle">新品資訊</div>
+    <div id="NewProductInfo">
+        <div class="EmpyTabs-flexContainer">
+            <button class="pb-3 EmpyTab active">SUUNTO</button>
+            <button class="pb-3 EmpyTab">MIO</button>
+            <button class="pb-3 EmpyTab">ORO</button>
+        </div>
+        <div class="EmpyPanels-flexContainer">
+            <div class="EmpyPanel">
+                <div class="EmpyContainer">
+                    <div class="EmpyGrid">
+                        <div class="EmpyGrid__column-6 EmpyGrid__column--md12">
+                            <div class="paper">
+                                <img class="img-fluid" src="build/images/suunto/suunto7.png" alt="suunto7" />
+                                <p class="paragraphy">SUUNTO 7</p>
+                                <p class="paragraphy">運動與生活完美合一</p>
+                                <button type="button" class="btn btn-empy">立即購買</button>
+                            </div>
+                        </div>
+                        <div class="EmpyGrid__column-6 EmpyGrid__column--md12">
+                            <div class="EmpyGrid">
+                                <div class="EmpyGrid__column-6">
+                                    <div class="paper">
+                                        <img class="img-fluid" src="build/images/suunto/suunto3.png" alt="suunto3" />
+                                        <p class="paragraphy">SUUNTO 3</p>
+
+                                        <button type="button" class="btn btn-empy">立即購買</button>
+                                    </div>
+                                </div>
+                                <div class="EmpyGrid__column-6">
+                                    <div class="paper">
+                                        <img class="img-fluid" src="build/images/suunto/suunto5.png" alt="suunto5" />
+                                        <p class="paragraphy">SUUNTO 5</p>
+
+                                        <button type="button" class="btn btn-empy">立即購買</button>
+                                    </div>
+                                </div>
+                                <div class="EmpyGrid__column-6">
+                                    <div class="paper">
+                                        <img class="img-fluid" src="build/images/suunto/suunto9baro.png" alt="suunto9baro" />
+                                        <p class="paragraphy">SUUNTO 9 baro</p>
+
+                                        <button type="button" class="btn btn-empy">立即購買</button>
+                                    </div>
+                                </div>
+                                <div class="EmpyGrid__column-6">
+                                    <div class="paper">
+                                        <img class="img-fluid" src="build/images/suunto/SPARTAN.png" alt="SPARTAN" />
+                                        <p class="paragraphy">SPARTAN</p>
+
+                                        <button type="button" class="btn btn-empy">立即購買</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="EmpyPanel">
+                <div class="EmpyContainer">
+                    <div class="EmpyGrid">
+                        <div class="EmpyGrid__column-3">
+                            <div class="EmpyGrid">
+                                <div class="EmpyGrid__column-12">
+                                    <div class="paper">
+                                        <img class="img-fluid" src="build/images/suunto/suunto3.png" alt="suunto3" />
+                                        <p>SUUNTO 3</p>
+
+                                        <button type="button" class="btn btn-empy">立即購買</button>
+                                    </div>
+                                </div>
+                                <div class="EmpyGrid__column-12">
+                                    <div class="paper">
+                                        <img class="img-fluid" src="build/images/suunto/suunto3.png" alt="suunto3" />
+                                        <p>SUUNTO 3</p>
+
+                                        <button type="button" class="btn btn-empy">立即購買</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="EmpyGrid__column-6 EmpyGrid__column--md12">
+                            <div class="paper">
+                                <img class="img-fluid" src="build/images/suunto/suunto7.png" alt="suunto7" />
+                                <p>SUUNTO 7</p>
+                                <p>運動與生活完美合一</p>
+                                <button type="button" class="btn btn-empy">立即購買</button>
+                            </div>
+                        </div>
+                        <div class="EmpyGrid__column-3">
+                            <div class="EmpyGrid">
+                                <div class="EmpyGrid__column-12">
+                                    <div class="paper">
+                                        <img class="img-fluid" src="build/images/suunto/suunto3.png" alt="suunto3" />
+                                        <p>SUUNTO 3</p>
+
+                                        <button type="button" class="btn btn-empy">立即購買</button>
+                                    </div>
+                                </div>
+                                <div class="EmpyGrid__column-12">
+                                    <div class="paper">
+                                        <img class="img-fluid" src="build/images/suunto/suunto3.png" alt="suunto3" />
+                                        <p>SUUNTO 3</p>
+
+                                        <button type="button" class="btn btn-empy">立即購買</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="EmpyPanel">
+                <div class="EmpyContainer">
+                    <div class="EmpyGrid">
+                        <div class="EmpyGrid__column-6 EmpyGrid__column--md12">
+                            <div class="EmpyGrid">
+                                <div class="EmpyGrid__column-6">
+                                    <div class="paper">
+                                        <img class="img-fluid" src="build/images/suunto/suunto3.png" alt="suunto3" />
+                                        <p>SUUNTO 3</p>
+
+                                        <button type="button" class="btn btn-empy">立即購買</button>
+                                    </div>
+                                </div>
+                                <div class="EmpyGrid__column-6">
+                                    <div class="paper">
+                                        <img class="img-fluid" src="build/images/suunto/suunto5.png" alt="suunto5" />
+                                        <p>SUUNTO 5</p>
+
+                                        <button type="button" class="btn btn-empy">立即購買</button>
+                                    </div>
+                                </div>
+                                <div class="EmpyGrid__column-6">
+                                    <div class="paper">
+                                        <img class="img-fluid" src="build/images/suunto/suunto9baro.png" alt="suunto9baro" />
+                                        <p>SUUNTO 9 baro</p>
+
+                                        <button type="button" class="btn btn-empy">立即購買</button>
+                                    </div>
+                                </div>
+                                <div class="EmpyGrid__column-6">
+                                    <div class="paper">
+                                        <img class="img-fluid" src="build/images/suunto/SPARTAN.png" alt="SPARTAN" />
+                                        <p>SPARTAN</p>
+
+                                        <button type="button" class="btn btn-empy">立即購買</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="EmpyGrid__column-6 EmpyGrid__column--md12">
+                            <div class="paper">
+                                <img class="img-fluid" src="build/images/suunto/suunto7.png" alt="suunto7" />
+                                <p>SUUNTO 7</p>
+                                <p>運動與生活完美合一</p>
+                                <button type="button" class="btn btn-empy">立即購買</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="emptySpace"></div>
+    <div id="NewsRelease">
+        <div class="EmpyTabs-flexContainer">
+            <button class="pb-3 EmpyTab active">最新消息</button>
+            <button class="pb-3 EmpyTab">新聞稿</button>
+            <button class="pb-3 EmpyTab">公告</button>
+        </div>
+        <div class="EmpyPanels-flexContainer">
+            <div class="EmpyPanel">
+                <div class="EmpyContainer">
+                    <div class="EmpyGrid">
+                        <div class="EmpyGrid__column-4">
+                            <div class="card">
+                                <img src="build/images/news/雙12%20_500x330.png" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-empy-link" id="socialBtn">分享</a>
+                                    <a href="#" class="btn btn-empy-link">了解更多</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="EmpyGrid__column-4">
+                            <div class="card">
+                                <img src="build/images/news/BlackFriday__500x330.png" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-empy-link">分享</a>
+                                    <a href="#" class="btn btn-empy-link">了解更多</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="EmpyGrid__column-4">
+                            <div class="card">
+                                <img src="build/images/news/Suunto-農曆新年特價活動_500x330.png" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-empy-link">分享</a>
+                                    <a href="#" class="btn btn-empy-link">了解更多</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="EmpyPanel">***MIO***</div>
+            <div class="EmpyPanel">***ORO***</div>
+        </div>
+    </div>
+</div>
+<div class="emptySpace emptySpace--subscriber">
+    <button class="btn btn-empy--outline">
+        <span class="iconfont icon_envelope-light" style="font-size: 1.6rem; width: 35px; height: 35px; line-height: 35px"></span>
+        <div style="padding: 10px; font-size: 1.25rem">訂閱電子報</div>
+    </button>
+</div>
+<div class="footer">
+    <div class="footerTop">
+        <div class="footerGrid-3">
+            <ul>
+                <li>客服諮詢：(02)8219-1889 分機212</li>
+                <li>週一至週五上午</li>
+                <li>10:00~12:00 下午 13:00~17:00</li>
+                <li>客服信箱 : service@empyrean.tw</li>
+                <li>地址：新北市新店區民權路95號6樓</li>
+            </ul>
+        </div>
+        <div class="footerGrid-7">
+            <div class="Empy-item">
+                <div class="itemName">品牌代理</div>
+                <div class="subItem">SUUNTO</div>
+                <div class="subItem">MIO</div>
+                <div class="subItem">ORO</div>
+            </div>
+            <div class="Empy-item">
+                <div class="itemName">最新訊息</div>
+                <div class="subItem">最新消息</div>
+                <div class="subItem">活動報名</div>
+            </div>
+            <div class="Empy-item">
+                <div class="itemName">公司介紹</div>
+                <div class="subItem">關於我們</div>
+                <div class="subItem">徵才資訊</div>
+            </div>
+            <div class="Empy-item">
+                <div class="itemName">何處購買</div>
+                <div class="subItem">購物中心</div>
+                <div class="subItem">一般通路</div>
+                <div class="subItem">網際通路</div>
+            </div>
+            <div class="Empy-item">
+                <div class="itemName">支援服務</div>
+                <div class="subItem">會員中心</div>
+                <div class="subItem">產品註冊</div>
+                <div class="subItem">常見問題</div>
+                <div class="subItem">支援服務</div>
+                <div class="subItem">維修申請</div>
+            </div>
+            <div class="Empy-item">
+                <div class="itemName">其他服務</div>
+                <div class="subItem">5HM1購物中心</div>
+                <div class="subItem">愛克賽事</div>
+            </div>
+        </div>
+    </div>
+    <div class="footerBottom">
+        <div class="socialContainer">
+            <div>關注我們</div>
+            <span class="iconfont icon_facebook-square-brands"></span>
+            <span class="iconfont icon_instagram-brands"></span>
+            <span class="iconfont icon_youtube-brands"></span>
+            <span class="iconfont icon_pinterest-brands"></span>
+        </div>
+        <p class="copyright">Copyright © 鴻翔國際電通 2021. All Rights Reserved. 隱私聲明 免責條款</p>
+    </div>
+</div>
+<div id="GOTOP">
+    <span class="iconfont icon_chevron-up-light"></span>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="application/javascript" src="http://localhost:35729/livereload.js"></script>
+<script type="application/javascript" src="build/js/scripts.min.js"></script>
+
+</body>
+</html>

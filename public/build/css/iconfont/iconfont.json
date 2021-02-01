@@ -1,0 +1,107 @@
+{
+  "id": "2132114",
+  "name": "Empyrean",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "official site icon",
+  "glyphs": [
+    {
+      "icon_id": "19709894",
+      "name": "_angle-right-light",
+      "font_class": "_angle-right-light",
+      "unicode": "e6e7",
+      "unicode_decimal": 59111
+    },
+    {
+      "icon_id": "19675070",
+      "name": "_chevron-up-light",
+      "font_class": "_chevron-up-light",
+      "unicode": "e6e6",
+      "unicode_decimal": 59110
+    },
+    {
+      "icon_id": "19672792",
+      "name": "_youtube-brands",
+      "font_class": "_youtube-brands",
+      "unicode": "e6e2",
+      "unicode_decimal": 59106
+    },
+    {
+      "icon_id": "19672793",
+      "name": "_pinterest-brands",
+      "font_class": "_pinterest-brands",
+      "unicode": "e6e3",
+      "unicode_decimal": 59107
+    },
+    {
+      "icon_id": "19672794",
+      "name": "_facebook-square-brands",
+      "font_class": "_facebook-square-brands",
+      "unicode": "e6e4",
+      "unicode_decimal": 59108
+    },
+    {
+      "icon_id": "19672795",
+      "name": "_instagram-brands",
+      "font_class": "_instagram-brands",
+      "unicode": "e6e5",
+      "unicode_decimal": 59109
+    },
+    {
+      "icon_id": "19669834",
+      "name": "_envelope-light",
+      "font_class": "_envelope-light",
+      "unicode": "e6e1",
+      "unicode_decimal": 59105
+    },
+    {
+      "icon_id": "19667146",
+      "name": "_line-messenger",
+      "font_class": "_line-messenger",
+      "unicode": "e6e0",
+      "unicode_decimal": 59104
+    },
+    {
+      "icon_id": "19667052",
+      "name": "_facebook-brands",
+      "font_class": "_facebook-brands",
+      "unicode": "e6dd",
+      "unicode_decimal": 59101
+    },
+    {
+      "icon_id": "19667054",
+      "name": "_twitter-brands",
+      "font_class": "_twitter-brands",
+      "unicode": "e6df",
+      "unicode_decimal": 59103
+    },
+    {
+      "icon_id": "19637753",
+      "name": "_bars-light",
+      "font_class": "_bars-light",
+      "unicode": "e6dc",
+      "unicode_decimal": 59100
+    },
+    {
+      "icon_id": "17689017",
+      "name": "_times-light",
+      "font_class": "_times-light",
+      "unicode": "e6cc",
+      "unicode_decimal": 59084
+    },
+    {
+      "icon_id": "17687464",
+      "name": "_user-light",
+      "font_class": "_user-light",
+      "unicode": "e6c9",
+      "unicode_decimal": 59081
+    },
+    {
+      "icon_id": "17685311",
+      "name": "_search-light",
+      "font_class": "_search-light",
+      "unicode": "e6c8",
+      "unicode_decimal": 59080
+    }
+  ]
+}
