@@ -136,10 +136,24 @@ const menuContainer = document.querySelector('.nav-menu')
 
 function renderLi(data) {
   const level1 = data.map((item, index) => {
-    return `<li><a class="menuToggle lv1Menu">${item.MenuName}</a></li>`
+    return `<li><a class="menuToggle lv1Menu">${item.MenuName}</a></li>
+    ${item.isChild ==='1' ? renderChildMenu(item.Child) : ''}
+`
   }).join('')
 
   return level1
+}
+
+function renderChildMenu(arr) {
+  const menuPanel = document.createElement('div')
+  menuPanel.classList.add(`nav-menu-1`)
+  return arr.map(item=>{
+    return `<a href="" class="dropdown-item itemLevel1">
+                            <div>${item.MenuName}</div>
+                            ${item.isChild ==='1' ? `<span className="iconfont icon_angle-right-light"></span>` : ''}
+                            
+                        </a>`
+  }).join('')
 }
 
 
