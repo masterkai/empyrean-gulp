@@ -570,6 +570,26 @@ body {
         -webkit-box-flex: 1;
             -ms-flex: 1 1 100%;
                 flex: 1 1 100%; } }
+  .EmpyGrid__column-8 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 66.67%;
+            flex: 0 1 66.67%;
+    padding: 12px; }
+    @media (max-width: 500px) {
+      .EmpyGrid__column-8 {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 100%;
+                flex: 1 1 100%; } }
+  .EmpyGrid__column-9 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 75%;
+            flex: 0 1 75%;
+    padding: 12px; }
+    @media (max-width: 500px) {
+      .EmpyGrid__column-9 {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 100%;
+                flex: 1 1 100%; } }
   .EmpyGrid__column-12 {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
@@ -753,6 +773,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px solid #aaaaaa; }
+  .user-profile-item--noUnderLine {
+    border-bottom: unset;
+    padding: 0;
+    margin: 0; }
   .user-profile-item .avatar {
     border-radius: 50px;
     margin-right: 12px;
@@ -1008,3 +1032,74 @@ body {
 .paragraphy {
   margin-top: 15px;
   margin-bottom: 15px; }
+
+.breadcrumb .breadcrumb-item {
+  font-size: .9rem; }
+
+.list-group-item {
+  padding: 24px 12px; }
+
+.member-section-title {
+  color: #8B8B8B;
+  padding: 39px 0;
+  font-size: 1.375rem;
+  border-bottom: 1px solid #d0d0d0; }
+
+.gender {
+  margin-top: 24px; }
+  .gender .gender-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+
+.calendar {
+  position: relative; }
+  .calendar .iconfont {
+    position: absolute;
+    right: 10px;
+    top: 10px; }
+
+.personal-profile-edit {
+  padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .personal-profile-edit p {
+    padding: 10px; }
+  .personal-profile-edit .desc {
+    padding: 0;
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: .8rem; }
+  .personal-profile-edit .avatar {
+    position: relative;
+    cursor: pointer;
+    border-radius: 67.5px;
+    background-position: center;
+    background-size: cover;
+    height: 135px;
+    width: 135px; }
+    .personal-profile-edit .avatar button {
+      padding: 5px 8px;
+      position: absolute;
+      bottom: 0;
+      border-radius: 4px;
+      outline: none; }
+      .personal-profile-edit .avatar button span {
+        font-size: .9rem; }

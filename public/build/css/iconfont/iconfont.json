@@ -6,6 +6,20 @@
   "description": "official site icon",
   "glyphs": [
     {
+      "icon_id": "19797980",
+      "name": "_pen-light",
+      "font_class": "_pen-light",
+      "unicode": "e6e9",
+      "unicode_decimal": 59113
+    },
+    {
+      "icon_id": "19796123",
+      "name": "_calendar-alt-light",
+      "font_class": "_calendar-alt-light",
+      "unicode": "e6e8",
+      "unicode_decimal": 59112
+    },
+    {
       "icon_id": "19709894",
       "name": "_angle-right-light",
       "font_class": "_angle-right-light",

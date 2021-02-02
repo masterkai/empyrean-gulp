@@ -22,8 +22,8 @@ function SubScribeModal() {
             </div>
         </div>
 `
-  const subscribeBtn = document.getElementById('subscribe')
-  subscribeBtn.addEventListener('click', () => {
+  const subscribeBtn = document.getElementById('subscribe')?document.getElementById('subscribe'):null
+  subscribeBtn&&subscribeBtn.addEventListener('click', () => {
     modal.textContent = ''
     modal.className = "Empy-modal Empy-modal--news-subscribe"
     modal.insertAdjacentHTML('afterbegin', subscribeBody)
@@ -80,8 +80,8 @@ function SocialModal() {
       </div>
   </div>
 `
-  const socialBtn = document.querySelector('#socialBtn')
-  socialBtn.addEventListener('click', (e) => {
+  const socialBtn = document.querySelector('#socialBtn')?document.querySelector('#socialBtn'):null
+  socialBtn&&socialBtn.addEventListener('click', (e) => {
     e.preventDefault()
     modal.className = 'Empy-modal Empy-modal--news-share'
     modal.textContent = ''

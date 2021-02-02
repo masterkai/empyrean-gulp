@@ -27,6 +27,20 @@
     flex: 0 1 50%;
     padding: 12px
   }
+  &__column-8 {
+    @include breakpoint($iphone) {
+      flex: 1 1 100%;
+    }
+    flex: 0 1 66.67%;
+    padding: 12px
+  }
+  &__column-9 {
+    @include breakpoint($iphone) {
+      flex: 1 1 100%;
+    }
+    flex: 0 1 75%;
+    padding: 12px
+  }
   &__column-12 {
     flex: 0 1 100%;
     padding: 12px
