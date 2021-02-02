@@ -366,13 +366,38 @@ body {
       -webkit-box-flex: 0;
           -ms-flex: 0 1 25%;
               flex: 0 1 25%; }
+      @media (max-width: 500px) {
+        .footer .footerTop .footerGrid-3 {
+          -webkit-box-flex: 1;
+              -ms-flex: 1 1 100%;
+                  flex: 1 1 100%; } }
       .footer .footerTop .footerGrid-3 ul {
         padding-left: 0; }
+        @media (max-width: 500px) {
+          .footer .footerTop .footerGrid-3 ul {
+            width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center; } }
         .footer .footerTop .footerGrid-3 ul li {
           color: rgba(0, 0, 0, 0.54);
           font-size: .9rem;
           line-height: 1.875;
           font-weight: 300; }
+          @media (max-width: 500px) {
+            .footer .footerTop .footerGrid-3 ul li {
+              -webkit-box-flex: 1;
+                  -ms-flex: 1 1 100%;
+                      flex: 1 1 100%; } }
     .footer .footerTop .footerGrid-7 {
       -webkit-box-flex: 0;
           -ms-flex: 0 1 75%;
@@ -388,6 +413,15 @@ body {
           -webkit-box-flex: 0;
               -ms-flex: 0 1 100%;
                   flex: 0 1 100%; } }
+      @media (max-width: 500px) {
+        .footer .footerTop .footerGrid-7 {
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
+          .footer .footerTop .footerGrid-7 .Empy-item {
+            -webkit-box-flex: 0 !important;
+                -ms-flex: 0 1 33.33% !important;
+                    flex: 0 1 33.33% !important;
+            margin-top: 12px; } }
       .footer .footerTop .footerGrid-7 .Empy-item {
         -webkit-box-flex: 0;
             -ms-flex: 0 1 calc(16.66666666666667% - 50px);
@@ -429,7 +463,8 @@ body {
       font-weight: 300; }
       @media (max-width: 500px) {
         .footer .footerBottom .copyright {
-          font-size: .8rem; } }
+          font-size: .8rem;
+          line-height: 1.5; } }
 
 #GOTOP,
 #GOTOP {
@@ -576,6 +611,29 @@ body {
 
 .EmpyPanels-flexContainer .EmpyPanel {
   display: none; }
+  .EmpyPanels-flexContainer .EmpyPanel .card {
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.2); }
+  .EmpyPanels-flexContainer .EmpyPanel .card-title {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-height: 20px;
+    max-height: 20px;
+    overflow: hidden; }
+  .EmpyPanels-flexContainer .EmpyPanel .card-text {
+    color: #707070;
+    font-weight: 300;
+    font-size: .9rem;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 20px;
+    max-height: 60px;
+    overflow: hidden;
+    margin-bottom: 12px; }
   .EmpyPanels-flexContainer .EmpyPanel:first-child {
     display: block; }
 
@@ -606,6 +664,26 @@ body {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     max-width: 100%; }
+    .Empy-mask .Empy-modal .card-title {
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      line-height: 20px;
+      max-height: 20px;
+      overflow: hidden; }
+    .Empy-mask .Empy-modal p.card-desc {
+      color: #707070;
+      font-weight: 300;
+      font-size: .9rem;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      line-height: 20px;
+      max-height: 60px;
+      overflow: hidden;
+      margin-bottom: 12px; }
     .Empy-mask .Empy-modal .Empy-modal-header {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -616,11 +694,15 @@ body {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      padding: 5px 24px; }
+      padding: 16px 24px;
+      border-bottom: 1px solid #dddddd; }
     .Empy-mask .Empy-modal .Empy-modal-body {
       padding: 24px; }
     .Empy-mask .Empy-modal--news-share {
       width: 500px;
+      height: auto; }
+    .Empy-mask .Empy-modal--news-subscribe {
+      width: 400px;
       height: auto; }
   .Empy-mask.show {
     display: block; }

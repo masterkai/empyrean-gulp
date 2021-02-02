@@ -129,9 +129,8 @@ const menuData = {
     "]"
 }
 const menuList = JSON.parse(menuData.data)
-console.log(menuList);
-// const menuContainer = document.createElement("ul")
-// menuContainer.classList.add('nav-menu')
+// console.log(menuList);
+
 const menuContainer = document.querySelector('.nav-menu')
 const mobileMenuContainer = document.querySelector('.mobile-nav-menu-ul')
 
@@ -597,12 +596,12 @@ function handleTabletChange(e) {
   if (e.matches) {
     // Then log the following message to the console
     $('.mobile-nav-menu-ul:not(last-child)').html('')
-    console.log('above 965px')
+    // console.log('above 965px')
     renderLiDesktop(menuList)
   } else {
     $('.nav-menu').html('')
     renderLiMobile(menuList)
-    console.log('under 965px');
+    // console.log('under 965px')
   }
 }
 

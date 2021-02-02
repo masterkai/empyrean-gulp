@@ -11,9 +11,22 @@
     padding-bottom: 24px;
     .footerGrid-3 {
       flex: 0 1 25%;
+      @include breakpoint($iphone){
+        flex: 1 1 100%;
+      }
       ul {
+        @include breakpoint($iphone){
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
         padding-left: 0;
         li {
+          @include breakpoint($iphone){
+            flex: 1 1 100%;
+          }
           color: rgba(0, 0, 0, 0.54);
           font-size: .9rem;
           line-height: 1.875;
@@ -24,6 +37,13 @@
     .footerGrid-7 {
       @include breakpoint($ipad){
         flex: 0 1 100%;
+      }
+      @include breakpoint($iphone){
+        flex-wrap: wrap;
+        .Empy-item {
+          flex: 0 1 33.33%!important;
+          margin-top: 12px;
+        }
       }
       flex: 0 1 75%;
       display: flex;
@@ -61,6 +81,7 @@
     .copyright {
       @include breakpoint($iphone){
         font-size: .8rem;
+        line-height: 1.5;
       }
       text-align: center;
       margin-top: 12px;
